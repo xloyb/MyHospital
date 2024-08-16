@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="769.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.hopitalcontroller">
+  <tabs>
+    <Tab text=" La gestion des patients">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <TextField fx:id="nomf" layoutX="552.0" layoutY="203.0" />
+                   <TextField fx:id="prenom" layoutX="552.0" layoutY="244.0" />
+                   <TextField fx:id="cin" layoutX="552.0" layoutY="162.0" />
+                   <TextField fx:id="telephone" layoutX="552.0" layoutY="288.0" />
+                   <Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#handleShowUpdatePatient" style="-fx-background-color: #311897;" text="Update" textFill="#0b61f5" />
+                   <Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#handleShowUpdatePatient" style="-fx-background-color: #311897;" text="Update" textFill="#0b61f5" />
+
+                   <Button fx:id="ajout" layoutX="634.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#ajout" style="-fx-background-color: #23eb4b;" text="Button" textFill="#23eb4b" />
+                   <Button fx:id="supp" layoutX="581.0" layoutY="353.0" mnemonicParsing="false" onAction="#deletePatient" onMouseClicked="#supp" style="-fx-background-color: #ee4747;" text="Button" textFill="#ee4747" />
+                   <Button layoutX="530.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#imprimer" style="-fx-background-color: #424ce1;" text="test" textFill="#ffffffe0" />
+                   <Button layoutX="101.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="195.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="275.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="373.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <RadioButton fx:id="sf" layoutX="642.0" layoutY="324.0" mnemonicParsing="false" text="Feminin" />
+                   <RadioButton fx:id="sm" layoutX="538.0" layoutY="324.0" mnemonicParsing="false" text="Masculin" />
+
+                   <Label layoutX="552.0" layoutY="188.0" text="nom_de_famille" />
+                   <Label layoutX="552.0" layoutY="270.0" text="telephone_patient" />
+                   <Label layoutX="552.0" layoutY="145.0" text="cin_patient" />
+                   <Label layoutX="552.0" layoutY="229.0" text="prenom_patient" />
+                  <ImageView fitHeight="74.0" fitWidth="85.0" layoutX="584.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                  <TableView fx:id="table" layoutY="81.0" prefHeight="266.0" prefWidth="520.0">
+                    <columns>
+                      <TableColumn fx:id="tcin" prefWidth="75.0" text="cin" />
+                      <TableColumn fx:id="tnom" prefWidth="75.0" text="nom" />
+                        <TableColumn fx:id="tprenom" prefWidth="75.0" text="prenom" />
+                        <TableColumn fx:id="ttel" prefWidth="75.0" text="telephone" />
+                        <TableColumn fx:id="tsexe" prefWidth="75.0" text="sexe" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text=" La gestion des médicaments">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <TextField layoutX="552.0" layoutY="203.0" />
+                   <TextField layoutX="552.0" layoutY="244.0" />
+                   <TextField layoutX="552.0" layoutY="162.0" />
+                   <Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleUpdateMedication" onMouseClicked="#modifm" style="-fx-background-color: #311897;" text="Button" textFill="#0b61f5" />
+                   <Button fx:id="ajoutm" layoutX="634.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#ajoutm" style="-fx-background-color: #23eb4b;" text="Button" textFill="#23eb4b" />
+                   <Button fx:id="suppm" layoutX="582.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#suppm" style="-fx-background-color: #ee4747;" text="Button" textFill="#ee4747" />
+                   <Button layoutX="530.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#imprimer" style="-fx-background-color: #424ce1;" text="Button" textFill="#424ce1e0" />
+                   <Button layoutX="101.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="195.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="275.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="373.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Label layoutX="552.0" layoutY="188.0" text="libelle" />
+                   <Label layoutX="552.0" layoutY="145.0" text="ref" />
+                   <Label layoutX="552.0" layoutY="229.0" text="prix" />      <TextField fx:id="libelle" layoutX="552.0" layoutY="203.0" />
+                   <TextField fx:id="prix" layoutX="552.0" layoutY="244.0" />
+                   <TextField fx:id="ref" layoutX="552.0" layoutY="162.0" />
+                   <TableView fx:id="medicamentTable" layoutY="51.0" prefHeight="302.0" prefWidth="529.0">
+                       <columns>
+                           <TableColumn fx:id="refColumn" prefWidth="75.0" text="Reference" />
+                           <TableColumn fx:id="libelleColumn" prefWidth="150.0" text="Libelle" />
+                           <TableColumn fx:id="prixColumn" prefWidth="75.0" text="Prix" />
+                       </columns>
+                   </TableView>
+
+
+                   <!--<Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#modif" style="-fx-background-color: #311897;" text="Button" textFill="#0b61f5" />
+                   <Button layoutX="634.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#ajout" style="-fx-background-color: #23eb4b;" text="Button" textFill="#23eb4b" />
+                   <Button layoutX="582.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#supp" style="-fx-background-color: #ee4747;" text="Button" textFill="#ee4747" />
+                   <Button layoutX="530.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#imprimer" style="-fx-background-color: #424ce1;" text="Button" textFill="#424ce1e0" /> -->
+                   <Button layoutX="101.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="195.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="275.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Button layoutX="373.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                   <Label layoutX="552.0" layoutY="188.0" text="libelle" />
+                   <Label layoutX="552.0" layoutY="145.0" />
+                   <Label layoutX="552.0" layoutY="229.0" text="prix" />               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text=" La gestion des médicaments des patient">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <TextField layoutX="552.0" layoutY="203.0" />
+                      <TextField fx:id="searchTextField" layoutX="552.0" layoutY="162.0" />
+                      <Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#modifm" style="-fx-background-color: #311897;" text="Button" textFill="#0b61f5" />
+                      <Button fx:id="insertPatientMedButton" layoutX="634.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleInsertPatientMed" onMouseClicked="#ajoutm" style="-fx-background-color: #23eb4b;" text="Button" textFill="#23eb4b" />
+                      <Button fx:id="DeletePatientMedC" layoutX="582.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#DeletePatientMedC" style="-fx-background-color: #ee4747;" text="Button" textFill="#ee4747" />
+                      <Button layoutX="530.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#imprimer" style="-fx-background-color: #424ce1;" text="Button" textFill="#424ce1e0" />
+                      <Button layoutX="101.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Button layoutX="195.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Button layoutX="275.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Button layoutX="373.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Label layoutX="552.0" layoutY="188.0" text="libelle" />
+                      <Label layoutX="552.0" layoutY="145.0" text="ref" />      <TextField layoutX="552.0" layoutY="203.0" />
+
+                      <TextField fx:id="searchMedicRefTextField" layoutX="552.0" layoutY="162.0" />
+                      <!--<Button layoutX="686.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#modif" style="-fx-background-color: #311897;" text="Button" textFill="#0b61f5" />
+                      <Button layoutX="634.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#ajout" style="-fx-background-color: #23eb4b;" text="Button" textFill="#23eb4b" />
+                      <Button layoutX="582.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#supp" style="-fx-background-color: #ee4747;" text="Button" textFill="#ee4747" />
+                      <Button layoutX="530.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#imprimer" style="-fx-background-color: #424ce1;" text="Button" textFill="#424ce1e0" /> -->
+                      <Button layoutX="101.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Button layoutX="195.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Button layoutX="275.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Button layoutX="373.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: #0b61f5;" text="Button" />
+                      <Label layoutX="552.0" layoutY="188.0" text="cin" />
+                      <Label layoutX="552.0" layoutY="145.0" />
+                  <ComboBox fx:id="searchComboBox" layoutX="552.0" layoutY="242.0" prefWidth="150.0" />
+                  <ComboBox fx:id="patientCINComboBox" layoutX="552.0" layoutY="290.0" prefWidth="150.0" />
+                  <TableView fx:id="patientMedTableView" layoutX="4.0" layoutY="54.0" prefHeight="273.0" prefWidth="440.0">
+                    <columns>
+                      <TableColumn fx:id="cinColumn" prefWidth="75.0" text="Cin" />
+                      <TableColumn fx:id="refColumn2" prefWidth="75.0" text="Medics Ref" />
+                    </columns>
+                  </TableView>               </children></AnchorPane>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>

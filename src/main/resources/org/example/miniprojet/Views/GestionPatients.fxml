@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="397.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.controller.GestionPatientsController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <TableView fx:id="table" prefHeight="266.0" prefWidth="520.0">
+                    <columns>
+                        <TableColumn fx:id="tcin" prefWidth="75.0" text="Cin" />
+                        <TableColumn fx:id="tnom" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="tprenom" prefWidth="75.0" text="Last Name " />
+                        <TableColumn fx:id="ttel" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="tsexe" prefWidth="75.0" text="Gender" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+
+                <GridPane alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+
+                    <Label text="Last Name" />
+                    <TextField fx:id="nomf" GridPane.columnIndex="1" />
+
+                    <Label text="Name" GridPane.rowIndex="1" />
+                    <TextField fx:id="prenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Cin" GridPane.rowIndex="2" />
+                    <TextField fx:id="cin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label text="Phone" GridPane.rowIndex="3" />
+                    <TextField fx:id="telephone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                </GridPane>
+
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="506.0" spacing="10.0">
+               <Button fx:id="createPDFButton" mnemonicParsing="false" onAction="#handleCreatePDF" style="-fx-background-color: #77B5FE;" text="Print Patient" textFill="WHITE" />
+   
+                   <HBox alignment="CENTER" spacing="10.0">
+                       <Button fx:id="ajout" mnemonicParsing="false" onMouseClicked="#ajout" style="-fx-background-color: #23eb4b;" text="Ajouter" textFill="#ffffff">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                       <Button fx:id="supp" mnemonicParsing="false" onAction="#deletePatient" onMouseClicked="#supp" style="-fx-background-color: #ee4747;" text="Supprimer" textFill="#ffffff" />
+                       <Button mnemonicParsing="false" onMouseClicked="#handleShowUpdatePatient" style="-fx-background-color: #FFA500;" text="Update" textFill="WHITE" />
+                   </HBox>
+                    <RadioButton fx:id="sf" mnemonicParsing="false" text="Feminin" />
+                    <RadioButton fx:id="sm" mnemonicParsing="false" text="Masculin" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

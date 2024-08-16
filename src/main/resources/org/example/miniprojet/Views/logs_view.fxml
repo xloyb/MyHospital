@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.controller.LogsController">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+        <Label text="Logs" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <TableView fx:id="logsTable" prefHeight="200" prefWidth="500">
+            <columns>
+                <TableColumn text="CIN" fx:id="cinColumn"/>
+                <TableColumn text="Actions" fx:id="actionsColumn"/>
+                <TableColumn text="Date" fx:id="dateColumn"/>
+            </columns>
+        </TableView>
+        <HBox spacing="10" alignment="CENTER">
+            <VBox spacing="5" HBox.hgrow="ALWAYS">
+                <Label text="CIN:"/>
+                <TextField fx:id="cinField" disable="true" HBox.hgrow="ALWAYS"/>
+                <Label text="Actions:"/>
+                <TextField fx:id="actionsField" disable="true" HBox.hgrow="ALWAYS"/>
+                <Label text="Date:"/>
+                <TextField fx:id="dateField" disable="true" HBox.hgrow="ALWAYS"/>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>

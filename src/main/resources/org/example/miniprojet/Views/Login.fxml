@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.controller.LoginController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" layoutX="16.0" layoutY="187.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="MyPatient" textAlignment="CENTER" wrappingWidth="268.51171875">
+                        <font>
+                            <Font name="System Bold" size="54.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="MyPatient - Your Partner in Wellness" textAlignment="CENTER" wrappingWidth="225.921875">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Text>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="50.0">
+                    <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login">
+                        <font>
+                            <Font name="Wingdings 3" size="27.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="loginField" prefHeight="30.0" prefWidth="202.0" promptText="Login" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                    <PasswordField fx:id="passwordField" prefHeight="30.0" prefWidth="202.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                    <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px;" text="login" textFill="WHITE">
+                        <cursor>
+                            <Cursor fx:constant="OPEN_HAND" />
+                        </cursor>
+                    </Button>
+                    <Text fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Register">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Text>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

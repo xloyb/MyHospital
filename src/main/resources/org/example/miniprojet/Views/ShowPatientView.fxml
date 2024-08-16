@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Patient Details" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+    <!-- Add your patient view UI elements here -->
+    <Label text="Name: John Doe" />
+    <Label text="Age: 30" />
+    <Label text="Condition: Healthy" />
+</VBox>

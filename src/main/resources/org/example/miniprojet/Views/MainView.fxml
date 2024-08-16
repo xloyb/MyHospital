@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.controller.MainController">
+    <left>
+        <VBox alignment="CENTER" prefWidth="200.0" spacing="10" style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
+            <Button fx:id="adminControlPanelButton" visible="false" onAction="#showACP" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-pref-width: 180;" text="Admin Control Panel" />
+            <Button fx:id="adminLogsButton" visible="false" onAction="#showLogs" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-pref-width: 180;" text="Logs" />
+
+            <Button onAction="#showPatientView" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-pref-width: 180;" text="Patients" />
+            <Button onAction="#showMedicsView" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-pref-width: 180;" text="Medicaments" />
+            <Button onAction="#showPatientMedicsView" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-pref-width: 180;" text="Patients' Medicament" />
+            <Button fx:id="logoutButton" onAction="#handleLogout" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-pref-width: 180;" text="Logout" />
+
+
+        </VBox>
+    </left>
+    <center>
+        <BorderPane>
+            <top>
+                <MenuBar style="-fx-background-color: #333; -fx-text-fill: white;">
+                    <menus>
+                        <Menu text="File">
+                            <items>
+                                <MenuItem text="New" />
+                                <MenuItem text="Open" />
+                                <MenuItem text="Save" />
+                                <MenuItem text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu text="Edit">
+                            <items>
+                                <MenuItem text="Cut" />
+                                <MenuItem text="Copy" />
+                                <MenuItem text="Paste" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+         <center>
+                <StackPane fx:id="contentPane" prefHeight="374.0" prefWidth="395.0" style="-fx-padding: 20;" BorderPane.alignment="CENTER">
+                    <!-- Initial content -->
+                    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Welcome to MyPatient" textAlignment="CENTER" />
+                </StackPane>
+         </center>
+        </BorderPane>
+    </center>
+</BorderPane>

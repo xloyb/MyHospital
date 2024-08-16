@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.controller.AdminController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Admin Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;" alignment="CENTER"/>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Total Personnel:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <VBox style="-fx-border-color: black; -fx-border-width: 1px; -fx-padding: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER">
+            <Label fx:id="totalPersonnelLabel" style="-fx-font-size: 16px;" alignment="CENTER"/>
+        </VBox>
+        <Label text="Total Medicaments:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <VBox style="-fx-border-color: black; -fx-border-width: 1px; -fx-padding: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER">
+            <Label fx:id="totalMedicamentsLabel" style="-fx-font-size: 16px;" alignment="CENTER"/>
+        </VBox>
+    </GridPane>
+
+
+
+    <TableView fx:id="personnelTable" prefHeight="200" prefWidth="300">
+        <columns>
+            <TableColumn fx:id="cinColumn" text="CIN" prefWidth="75"/>
+            <TableColumn fx:id="nomColumn" text="Name" prefWidth="100"/>
+            <TableColumn fx:id="prenomColumn" text="Surname" prefWidth="100"/>
+            <TableColumn fx:id="fonctionColumn" text="Function" prefWidth="75"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <VBox spacing="10">
+            <Label text="Selected User CIN:"/>
+            <TextField fx:id="cinField" disable="true"/>
+            <Label text="New Function:"/>
+            <TextField fx:id="functionField"/>
+        </VBox>
+        <VBox alignment="CENTER" spacing="10">
+            <Button text="Update Function" onAction="#updateFunction"/>
+            <Label fx:id="statusLabel" style="-fx-text-fill: red;"/>
+        </VBox>
+    </HBox>
+</VBox>

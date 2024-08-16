@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.UpdatePatientController">
+    <children>
+        <Label text="Update Patient" layoutX="14.0" layoutY="14.0" />
+        <TextField fx:id="nomf" layoutX="14.0" layoutY="50.0" promptText="Nom" />
+        <TextField fx:id="prenom" layoutX="14.0" layoutY="90.0" promptText="Prenom" />
+        <TextField fx:id="telephone" layoutX="14.0" layoutY="130.0" promptText="Telephone" />
+        <TextField fx:id="cin" layoutX="14.0" layoutY="170.0" promptText="CIN" editable="false"/>
+        <RadioButton fx:id="sm" text="Male" layoutX="14.0" layoutY="210.0" />
+        <RadioButton fx:id="sf" text="Female" layoutX="80.0" layoutY="210.0" />
+        <Button text="Update" layoutX="14.0" layoutY="250.0" onAction="#handleUpdate" />
+    </children>
+</AnchorPane>

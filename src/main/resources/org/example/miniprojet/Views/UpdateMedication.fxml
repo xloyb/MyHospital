@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="200" prefWidth="300" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniprojet.controller.UpdateMedicationController">
+    <Label text="Update Medication" />
+    <HBox>
+        <Label text="Reference:" />
+        <TextField fx:id="refField" editable="false" />
+    </HBox>
+    <HBox>
+        <Label text="Libelle:" />
+        <TextField fx:id="libelleField" />
+    </HBox>
+    <HBox>
+        <Label text="Prix:" />
+        <TextField fx:id="prixField" />
+    </HBox>
+    <Button text="Update" onAction="#handleUpdate" />
+</VBox>
